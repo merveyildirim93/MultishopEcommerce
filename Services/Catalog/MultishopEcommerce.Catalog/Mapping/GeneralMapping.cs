@@ -19,10 +19,10 @@ namespace MultishopEcommerce.Catalog.Mapping
             CreateMap<Product, CreateProductDto>().ReverseMap();
             CreateMap<Product, GetByIdProductDto>().ReverseMap();
 
-            CreateMap<ProductDetail, ResultProductDetailDto>().ReverseMap();
-            CreateMap<ProductDetail, UpdateProductDetailDto>().ReverseMap();
-            CreateMap<ProductDetail, CreateProductDetailDto>().ReverseMap();
-            CreateMap<ProductDetail, GetByIdProductDetailDto>().ReverseMap();
+            CreateMap<ProductImage, ResultProductDetailDto>().ReverseMap();
+            CreateMap<ProductImage, UpdateProductDetailDto>().ReverseMap();
+            CreateMap<ProductImage, CreateProductDetailDto>().ReverseMap();
+            CreateMap<ProductImage, GetByIdProductDetailDto>().ReverseMap();
 
             CreateMap<ProductImage, ResultProductImageDto>().ReverseMap();
             CreateMap<ProductImage, UpdateProductImageDto>().ReverseMap();
