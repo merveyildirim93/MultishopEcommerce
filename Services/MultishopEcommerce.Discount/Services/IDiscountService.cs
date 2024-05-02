@@ -7,7 +7,7 @@ namespace MultishopEcommerce.Discount.Services
         Task<List<ResultCouponDto>> GetAllCoupons();
         Task CreateCoupon(CreateCouponDto couponDto);
         Task UpdateCoupon(UpdateCouponDto couponDto);
-        Task DeleteCoupon(string id);
-        Task<GetByIdCouponDto> GetByIdCoupon(string id);
+        Task DeleteCoupon(int id);
+        Task<GetByIdCouponDto> GetByIdCoupon(int id);
     }
 }

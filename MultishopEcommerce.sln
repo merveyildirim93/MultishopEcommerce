@@ -5,9 +5,11 @@ VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{99764577-FC14-4812-96C7-0BD6EDC94B29}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultishopEcommerce.Catalog", "Services\MultishopEcommerce.Catalog\MultishopEcommerce.Catalog.csproj", "{EAA0877D-71A4-4609-BBBC-F11C3138A17D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultishopEcommerce.Catalog", "Services\MultishopEcommerce.Catalog\MultishopEcommerce.Catalog.csproj", "{EAA0877D-71A4-4609-BBBC-F11C3138A17D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultishopEcommerce.Discount", "Services\MultishopEcommerce.Discount\MultishopEcommerce.Discount.csproj", "{DA4A249B-421C-4B04-BFF0-BCCA9D26598C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultishopEcommerce.Discount", "Services\MultishopEcommerce.Discount\MultishopEcommerce.Discount.csproj", "{DA4A249B-421C-4B04-BFF0-BCCA9D26598C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultishopEcommerce.Order", "Services\MultishopEcommerce.Order\MultishopEcommerce.Order.csproj", "{7E0B63A9-640F-4CFE-B892-2D30429A33E8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,6 +25,10 @@ Global
 		{DA4A249B-421C-4B04-BFF0-BCCA9D26598C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DA4A249B-421C-4B04-BFF0-BCCA9D26598C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DA4A249B-421C-4B04-BFF0-BCCA9D26598C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E0B63A9-640F-4CFE-B892-2D30429A33E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E0B63A9-640F-4CFE-B892-2D30429A33E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E0B63A9-640F-4CFE-B892-2D30429A33E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E0B63A9-640F-4CFE-B892-2D30429A33E8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
