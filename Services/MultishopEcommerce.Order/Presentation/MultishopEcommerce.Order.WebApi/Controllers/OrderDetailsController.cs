@@ -16,9 +16,9 @@ namespace MultishopEcommerce.Order.WebApi.Controllers
         private readonly GetOrderDetailQueryHandler _getOrderDetailQueryHandler;
         private readonly GetOrderDetailByIdQueryHandler _getOrderDetailByIdQueryHandler;
         private readonly CreateOrderDetailCommandHandler _createOrderDetailCommandHandler;
-        private readonly UpdateOrderDetailQueryHandler _updateOrderDetailCommandHandler;
-        private readonly RemoveOrderDetailQueryHandler _removeOrderDetailCommandHandler;
-        public OrderDetailsController(GetOrderDetailQueryHandler getOrderDetailQueryHandler, GetOrderDetailByIdQueryHandler getOrderDetailByIdQueryHandler, CreateOrderDetailCommandHandler createOrderDetailCommandHandler, UpdateOrderDetailQueryHandler updateOrderDetailCommandHandler, RemoveOrderDetailQueryHandler removeOrderDetailCommandHandler)
+        private readonly UpdateOrderDetailCommandHandler _updateOrderDetailCommandHandler;
+        private readonly RemoveOrderDetailCommandHandler _removeOrderDetailCommandHandler;
+        public OrderDetailsController(GetOrderDetailQueryHandler getOrderDetailQueryHandler, GetOrderDetailByIdQueryHandler getOrderDetailByIdQueryHandler, CreateOrderDetailCommandHandler createOrderDetailCommandHandler, UpdateOrderDetailCommandHandler updateOrderDetailCommandHandler, RemoveOrderDetailCommandHandler removeOrderDetailCommandHandler)
         {
             _getOrderDetailQueryHandler = getOrderDetailQueryHandler;
             _getOrderDetailByIdQueryHandler = getOrderDetailByIdQueryHandler;
