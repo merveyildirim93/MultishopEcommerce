@@ -1,4 +1,5 @@
-﻿using MultishopEcommerce.Order.Application.Interfaces;
+﻿using MultishopEcommerce.Order.Application.Features.CQRS.Commands.AddressCommands;
+using MultishopEcommerce.Order.Application.Interfaces;
 using MultishopEcommerce.Order.Domain.Entities;
 using System;
 using System.Collections.Generic;
@@ -6,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MultishopEcommerce.Order.Application.Features.CQRS.Commands.AddressCommands
+namespace MultishopEcommerce.Order.Application.Features.CQRS.Handlers.AddressHandlers
 {
     public class UpdateAddressCommandHandler
     {
@@ -19,15 +20,12 @@ namespace MultishopEcommerce.Order.Application.Features.CQRS.Commands.AddressCom
         public async Task Handle(UpdateAddressCommand command)
         {
             var value = await _repository.GetById(command.AddressId);
-            await _repository.Update(new Address
-            {
-                City = value.City,
-                Detail = value.Detail,
-                Distrinct = value.Distrinct,
-                UserId = value.UserId,
-                AddressId = value.AddressId
-            }); 
+           value.AddressId = command.AddressId;
+            value.UserId = command.UserId;
+            value.Distrinct = command.Distrinct;
+            value.Detail = command.Detail;
+            value.City = command.City;
+            await _repository.Update(value);
         }
-
     }
 }

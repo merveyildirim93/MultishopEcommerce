@@ -1,18 +1,21 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using MultishopEcommerce.Order.Application.Interfaces;
+using MultishopEcommerce.Order.Persistence.Context;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
-using MultishopEcommerce.Order.Application.Interfaces;
 
 namespace MultishopEcommerce.Order.Persistence.Repositories
 {
-    public class Repository<T>: IRepository<T> where T : class
+    public class Repository<T> : IRepository<T> where T : class
     {
         private readonly OrderContext _orderContext;
         public Repository(OrderContext orderContext)
         {
-                _orderContext = orderContext;
+            _orderContext = orderContext;
         }
 
         public async Task Create(T entity)
@@ -37,7 +40,7 @@ namespace MultishopEcommerce.Order.Persistence.Repositories
             return await _orderContext.Set<T>().FindAsync(id);
         }
 
-        public async Task<T> GetById(Expression<Func<T, bool>> filter)
+        public async Task<T> GetByFilter(Expression<Func<T, bool>> filter)
         {
             return await _orderContext.Set<T>().SingleOrDefaultAsync(filter);
         }
@@ -47,6 +50,5 @@ namespace MultishopEcommerce.Order.Persistence.Repositories
             _orderContext.Set<T>().Update(entity);
             await _orderContext.SaveChangesAsync();
         }
-
     }
 }

@@ -1,4 +1,5 @@
-﻿using MultishopEcommerce.Order.Application.Interfaces;
+﻿using MultishopEcommerce.Order.Application.Features.CQRS.Commands.AddressCommands;
+using MultishopEcommerce.Order.Application.Interfaces;
 using MultishopEcommerce.Order.Domain.Entities;
 using System;
 using System.Collections.Generic;
@@ -6,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MultishopEcommerce.Order.Application.Features.CQRS.Commands.AddressCommands
+namespace MultishopEcommerce.Order.Application.Features.CQRS.Handlers.AddressHandlers
 {
     public class RemoveAddressCommandHandler
     {
@@ -22,6 +23,5 @@ namespace MultishopEcommerce.Order.Application.Features.CQRS.Commands.AddressCom
             await _repository.Delete(value);
 
         }
-
     }
 }
