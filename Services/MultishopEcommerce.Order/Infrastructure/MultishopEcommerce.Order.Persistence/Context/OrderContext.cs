@@ -1,11 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.Identity.Client;
 using MultishopEcommerce.Order.Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MultishopEcommerce.Order.Persistence.Context
 {
@@ -13,7 +7,7 @@ namespace MultishopEcommerce.Order.Persistence.Context
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=... initial Catalog=MultishopOrderDd; integrated Security:true;");
+            optionsBuilder.UseSqlServer("Server=localhost,1440; initial Catalog=MultishopOrderDb; User=sa; Password=123456*Aa; integrated security=true; TrustServerCertificate=True; Trusted_Connection=False; MultipleActiveResultSets=true");
         }
         public DbSet<Address> Addresses { get; set; }
         public DbSet<OrderDetail> OrderDetails { get; set; }

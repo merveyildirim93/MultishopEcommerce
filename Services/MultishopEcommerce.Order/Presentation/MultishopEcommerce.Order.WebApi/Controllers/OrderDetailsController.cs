@@ -1,10 +1,6 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using MultishopEcommerce.Order.Application.Features.CQRS.Commands.AddressCommands;
+﻿using Microsoft.AspNetCore.Mvc;
 using MultishopEcommerce.Order.Application.Features.CQRS.Commands.OrderDetailCommands;
-using MultishopEcommerce.Order.Application.Features.CQRS.Handlers.AddressHandlers;
 using MultishopEcommerce.Order.Application.Features.CQRS.Handlers.OrderDetailHandlers;
-using MultishopEcommerce.Order.Application.Features.CQRS.Queries.AddressQueries;
 using MultishopEcommerce.Order.Application.Features.CQRS.Queries.OrderDetailQueries;
 
 namespace MultishopEcommerce.Order.WebApi.Controllers

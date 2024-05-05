@@ -1,8 +1,8 @@
 using MultishopEcommerce.Order.Application.Features.CQRS.Handlers.AddressHandlers;
 using MultishopEcommerce.Order.Application.Features.CQRS.Handlers.OrderDetailHandlers;
-using MultishopEcommerce.Order.Application.Features.CQRS.Queries.AddressQueries;
 using MultishopEcommerce.Order.Application.Interfaces;
 using MultishopEcommerce.Order.Application.Services;
+using MultishopEcommerce.Order.Persistence.Context;
 using MultishopEcommerce.Order.Persistence.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -19,6 +19,7 @@ builder.Services.AddScoped<CreateOrderDetailCommandHandler>();
 builder.Services.AddScoped<UpdateOrderDetailCommandHandler>();
 builder.Services.AddScoped<RemoveOrderDetailCommandHandler>();
 
+builder.Services.AddDbContext<OrderContext>();
 builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 builder.Services.AddApplicationService(builder.Configuration);
 

@@ -1,13 +1,11 @@
 ﻿using MediatR;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MultishopEcommerce.Order.Application.Features.Mediator.Commands.OrderingCommands;
-using MultishopEcommerce.Order.Application.Features.Mediator.Handlers.OrderingHandlers;
 using MultishopEcommerce.Order.Application.Features.Mediator.Queries.OrderingQueries;
 
 namespace MultishopEcommerce.Order.WebApi.Controllers
 {
-    [Route("api/[controller]{[action]")]
+    [Route("api/[controller]/[action]")]
     [ApiController]
     public class OrderingsController : ControllerBase
     {
