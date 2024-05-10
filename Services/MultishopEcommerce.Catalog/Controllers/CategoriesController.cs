@@ -1,11 +1,13 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MultishopEcommerce.Catalog.Dtos.CategoryDtos;
 using MultishopEcommerce.Catalog.Services.CategoryServices;
 
 namespace MultishopEcommerce.Catalog.Controllers
 {
-    [Route("api/[controller]")]
+    [Authorize]
+    [Route("api/[controller]/[action]")]
     [ApiController]
     public class CategoriesController : ControllerBase
     {

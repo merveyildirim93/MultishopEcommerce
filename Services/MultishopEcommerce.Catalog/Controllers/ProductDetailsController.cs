@@ -5,7 +5,7 @@ using MultishopEcommerce.Catalog.Services.ProductDetailServices;
 
 namespace MultishopEcommerce.Catalog.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[controller]/[action]")]
     [ApiController]
     public class ProductDetailsController : ControllerBase
     {

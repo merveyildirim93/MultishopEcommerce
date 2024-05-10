@@ -6,7 +6,7 @@ using MultishopEcommerce.Catalog.Services.ProductImageServices;
 
 namespace MultishopEcommerce.Catalog.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[controller]/[action]")]
     [ApiController]
     public class ProductImagesController : ControllerBase
     {
