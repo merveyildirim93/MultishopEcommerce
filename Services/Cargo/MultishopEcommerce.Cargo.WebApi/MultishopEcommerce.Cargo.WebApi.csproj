@@ -7,19 +7,22 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Dapper" Version="2.1.35" />
-    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.29" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.18" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.18">
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.29">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.18" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.18">
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.29">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MultishopEcommerce.Cargo.Business\MultishopEcommerce.Cargo.Business.csproj" />
+    <ProjectReference Include="..\MultishopEcommerce.Cargo.DataAccess\MultishopEcommerce.Cargo.DataAccess.csproj" />
+    <ProjectReference Include="..\MultishopEcommerce.Cargo.Dto\MultishopEcommerce.Cargo.Dto.csproj" />
+    <ProjectReference Include="..\MultishopEcommerce.Cargo.Entity\MultishopEcommerce.Cargo.Entity.csproj" />
   </ItemGroup>
 
 </Project>

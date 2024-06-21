@@ -28,6 +28,7 @@ namespace Multishop.IdentityServer
 
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddLocalApiAuthentication();
             services.AddControllersWithViews();
 
             services.AddDbContext<ApplicationDbContext>(options =>
@@ -37,7 +38,7 @@ namespace Multishop.IdentityServer
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
 
-            services.AddLocalApiAuthentication();
+           
 
             var builder = services.AddIdentityServer(options =>
             {
