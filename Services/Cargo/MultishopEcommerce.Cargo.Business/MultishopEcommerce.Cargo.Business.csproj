@@ -6,4 +6,14 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\MultishopEcommerce.Cargo.DataAccess\MultishopEcommerce.Cargo.DataAccess.csproj" />
+    <ProjectReference Include="..\MultishopEcommerce.Cargo.Entity\MultishopEcommerce.Cargo.Entity.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Extensions\" />
+    <Folder Include="ValidationRules\" />
+  </ItemGroup>
+
 </Project>
